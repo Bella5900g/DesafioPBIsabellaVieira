@@ -27,5 +27,9 @@ _Insira no Prompt de Comando_ <br>
 ```pip install -U robotframework-requests==0.7.2```<br>
 _Foi utilizado a versão 0.7.2 da Library Requests_
 
+* Visual Studio Code <br> _Vá na opção "Extensões" e procure pela extensão chamada:_ <br> 
+```Robot Framework Language Server da Robocorp```<br>
+_OBS: Não instale mais nenhum outro plugin para Robot._
+
 
 
