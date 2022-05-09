@@ -35,7 +35,7 @@ _OBS: Não instale mais nenhum outro plugin para Robot._
 
 ## Execução:
 
-* Para executar os testes abra o terminal de comando dentro no visual studio code na pasta dos projetos e insira o comando:
+* Para executar os testes abra o terminal de comando dentro no visual studio code na pasta dos projetos e insira o comando: <br>
 ```robot -d .\resultados\ .\desafioDom_gherkin_bdd.robot``` > Para o Desafio 2.1 WebTesting <br>
 ```robot -d .\resultados\ .\TestCasesAPIUsers.robot``` > Para o Desafio 2.2 APITesting <br>
 _Os Logs dos resultados ficaram nas devidas pastas de cada desafio._
