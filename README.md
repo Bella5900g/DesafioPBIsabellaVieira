@@ -22,4 +22,10 @@ _Insira no Prompt de Comando:_ <br>
  _Insira no Prompt de Comando_ <br>
 ```pip install --upgrade robotframework-seleniumlibrary```
 
+#### Library Requests
+_Insira no Prompt de Comando_ <br>
+```pip install -U robotframework-requests==0.7.2```<br>
+_Foi utilizado a versão 0.7.2 da Library Requests_
+
+
 
