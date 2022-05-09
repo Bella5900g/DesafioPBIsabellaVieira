@@ -1,0 +1,981 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.10.4 on win32)" generated="20220508 19:29:30.923" rpa="false" schemaversion="3">
+<suite id="s1" name="TestCasesAPIUsers" source="C:\Desafio1\Desafio Parana\APIsTesting\TestCasesAPIUsers.robot">
+<kw name="Conectar API" library="ResourceAPI" type="SETUP">
+<kw name="Create Session" library="RequestsLibrary">
+<arg>UsersAPI</arg>
+<arg>${URS_API}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20220508 19:29:31.420" level="INFO">Creating Session using : alias=UsersAPI, url=http://jsonplaceholder.typicode.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20220508 19:29:31.418" endtime="20220508 19:29:31.421"/>
+</kw>
+<status status="PASS" starttime="20220508 19:29:31.417" endtime="20220508 19:29:31.421"/>
+</kw>
+<test id="s1-t1" name="Buscar a listagem de todos os users (GET em todos os users)" line="7">
+<kw name="Requisitar todos os users" library="ResourceAPI">
+<kw name="Get Request" library="RequestsLibrary">
+<var>${RESPOSTA}</var>
+<arg>UsersAPI</arg>
+<arg>users</arg>
+<doc>Send a GET request on the session object found using the
+given `alias`</doc>
+<msg timestamp="20220508 19:29:31.624" level="INFO">GET Request : url=http://jsonplaceholder.typicode.com/users 
+ path_url=/users 
+ headers={'User-Agent': 'python-requests/2.27.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20220508 19:29:31.624" level="INFO">GET Response : url=http://jsonplaceholder.typicode.com/users 
+ status=200, reason=OK 
+ body=[
+  {
+    "id": 1,
+    "name": "Leanne Graham",
+    "username": "Bret",
+    "email": "Sincere@april.biz",
+    "address": {
+      "street": "Kulas Light",
+      "suite": "Apt. 556",
+      "city": "Gwenborough",
+      "zipcode": "92998-3874",
+      "geo": {
+        "lat": "-37.3159",
+        "lng": "81.1496"
+      }
+    },
+    "phone": "1-770-736-8031 x56442",
+    "website": "hildegard.org",
+    "company": {
+      "name": "Romaguera-Crona",
+      "catchPhrase": "Multi-layered client-server neural-net",
+      "bs": "harness real-time e-markets"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Ervin Howell",
+    "username": "Antonette",
+    "email": "Shanna@melissa.tv",
+    "address": {
+      "street": "Victor Plains",
+      "suite": "Suite 879",
+      "city": "Wisokyburgh",
+      "zipcode": "90566-7771",
+      "geo": {
+        "lat": "-43.9509",
+        "lng": "-34.4618"
+      }
+    },
+    "phone": "010-692-6593 x09125",
+    "website": "anastasia.net",
+    "company": {
+      "name": "Deckow-Crist",
+      "catchPhrase": "Proactive didactic contingency",
+      "bs": "synergize scalable supply-chains"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Clementine Bauch",
+    "username": "Samantha",
+    "email": "Nathan@yesenia.net",
+    "address": {
+      "street": "Douglas Extension",
+      "suite": "Suite 847",
+      "city": "McKenziehaven",
+      "zipcode": "59590-4157",
+      "geo": {
+        "lat": "-68.6102",
+        "lng": "-47.0653"
+      }
+    },
+    "phone": "1-463-123-4447",
+    "website": "ramiro.info",
+    "company": {
+      "name": "Romaguera-Jacobson",
+      "catchPhrase": "Face to face bifurcated interface",
+      "bs": "e-enable strategic applications"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Patricia Lebsack",
+    "username": "Karianne",
+    "email": "Julianne.OConner@kory.org",
+    "address": {
+      "street": "Hoeger Mall",
+      "suite": "Apt. 692",
+      "city": "South Elvis",
+      "zipcode": "53919-4257",
+      "geo": {
+        "lat": "29.4572",
+        "lng": "-164.2990"
+      }
+    },
+    "phone": "493-170-9623 x156",
+    "website": "kale.biz",
+    "company": {
+      "name": "Robel-Corkery",
+      "catchPhrase": "Multi-tiered zero tolerance productivity",
+      "bs": "transition cutting-edge web services"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Chelsey Dietrich",
+    "username": "Kamren",
+    "email": "Lucio_Hettinger@annie.ca",
+    "address": {
+      "street": "Skiles Walks",
+      "suite": "Suite 351",
+      "city": "Roscoeview",
+      "zipcode": "33263",
+      "geo": {
+        "lat": "-31.8129",
+        "lng": "62.5342"
+      }
+    },
+    "phone": "(254)954-1289",
+    "website": "demarco.info",
+    "company": {
+      "name": "Keebler LLC",
+      "catchPhrase": "User-centric fault-tolerant solution",
+      "bs": "revolutionize end-to-end systems"
+    }
+  },
+  {
+    "id": 6,
+    "name": "Mrs. Dennis Schulist",
+    "username": "Leopoldo_Corkery",
+    "email": "Karley_Dach@jasper.info",
+    "address": {
+      "street": "Norberto Crossing",
+      "suite": "Apt. 950",
+      "city": "South Christy",
+      "zipcode": "23505-1337",
+      "geo": {
+        "lat": "-71.4197",
+        "lng": "71.7478"
+      }
+    },
+    "phone": "1-477-935-8478 x6430",
+    "website": "ola.org",
+    "company": {
+      "name": "Considine-Lockman",
+      "catchPhrase": "Synchronised bottom-line interface",
+      "bs": "e-enable innovative applications"
+    }
+  },
+  {
+    "id": 7,
+    "name": "Kurtis Weissnat",
+    "username": "Elwyn.Skiles",
+    "email": "Telly.Hoeger@billy.biz",
+    "address": {
+      "street": "Rex Trail",
+      "suite": "Suite 280",
+      "city": "Howemouth",
+      "zipcode": "58804-1099",
+      "geo": {
+        "lat": "24.8918",
+        "lng": "21.8984"
+      }
+    },
+    "phone": "210.067.6132",
+    "website": "elvis.io",
+    "company": {
+      "name": "Johns Group",
+      "catchPhrase": "Configurable multimedia task-force",
+      "bs": "generate enterprise e-tailers"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Nicholas Runolfsdottir V",
+    "username": "Maxime_Nienow",
+    "email": "Sherwood@rosamond.me",
+    "address": {
+      "street": "Ellsworth Summit",
+      "suite": "Suite 729",
+      "city": "Aliyaview",
+      "zipcode": "45169",
+      "geo": {
+        "lat": "-14.3990",
+        "lng": "-120.7677"
+      }
+    },
+    "phone": "586.493.6943 x140",
+    "website": "jacynthe.com",
+    "company": {
+      "name": "Abernathy Group",
+      "catchPhrase": "Implemented secondary concept",
+      "bs": "e-enable extensible e-tailers"
+    }
+  },
+  {
+    "id": 9,
+    "name": "Glenna Reichert",
+    "username": "Delphine",
+    "email": "Chaim_McDermott@dana.io",
+    "address": {
+      "street": "Dayna Park",
+      "suite": "Suite 449",
+      "city": "Bartholomebury",
+      "zipcode": "76495-3109",
+      "geo": {
+        "lat": "24.6463",
+        "lng": "-168.8889"
+      }
+    },
+    "phone": "(775)976-6794 x41206",
+    "website": "conrad.com",
+    "company": {
+      "name": "Yost and Sons",
+      "catchPhrase": "Switchable contextually-based project",
+      "bs": "aggregate real-time technologies"
+    }
+  },
+  {
+    "id": 10,
+    "name": "Clementina DuBuque",
+    "username": "Moriah.Stanton",
+    "email": "Rey.Padberg@karina.biz",
+    "address": {
+      "street": "Kattie Turnpike",
+      "suite": "Suite 198",
+      "city": "Lebsackbury",
+      "zipcode": "31428-2261",
+      "geo": {
+        "lat": "-38.2386",
+        "lng": "57.2232"
+      }
+    },
+    "phone": "024-648-3804",
+    "website": "ambrose.net",
+    "company": {
+      "name": "Hoeger LLC",
+      "catchPhrase": "Centralized empowering task-force",
+      "bs": "target end-to-end models"
+    }
+  }
+] 
+ </msg>
+<msg timestamp="20220508 19:29:31.625" level="INFO">${RESPOSTA} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220508 19:29:31.426" endtime="20220508 19:29:31.625"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${RESPOSTA.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220508 19:29:31.627" level="INFO">[
+  {
+    "id": 1,
+    "name": "Leanne Graham",
+    "username": "Bret",
+    "email": "Sincere@april.biz",
+    "address": {
+      "street": "Kulas Light",
+      "suite": "Apt. 556",
+      "city": "Gwenborough",
+      "zipcode": "92998-3874",
+      "geo": {
+        "lat": "-37.3159",
+        "lng": "81.1496"
+      }
+    },
+    "phone": "1-770-736-8031 x56442",
+    "website": "hildegard.org",
+    "company": {
+      "name": "Romaguera-Crona",
+      "catchPhrase": "Multi-layered client-server neural-net",
+      "bs": "harness real-time e-markets"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Ervin Howell",
+    "username": "Antonette",
+    "email": "Shanna@melissa.tv",
+    "address": {
+      "street": "Victor Plains",
+      "suite": "Suite 879",
+      "city": "Wisokyburgh",
+      "zipcode": "90566-7771",
+      "geo": {
+        "lat": "-43.9509",
+        "lng": "-34.4618"
+      }
+    },
+    "phone": "010-692-6593 x09125",
+    "website": "anastasia.net",
+    "company": {
+      "name": "Deckow-Crist",
+      "catchPhrase": "Proactive didactic contingency",
+      "bs": "synergize scalable supply-chains"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Clementine Bauch",
+    "username": "Samantha",
+    "email": "Nathan@yesenia.net",
+    "address": {
+      "street": "Douglas Extension",
+      "suite": "Suite 847",
+      "city": "McKenziehaven",
+      "zipcode": "59590-4157",
+      "geo": {
+        "lat": "-68.6102",
+        "lng": "-47.0653"
+      }
+    },
+    "phone": "1-463-123-4447",
+    "website": "ramiro.info",
+    "company": {
+      "name": "Romaguera-Jacobson",
+      "catchPhrase": "Face to face bifurcated interface",
+      "bs": "e-enable strategic applications"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Patricia Lebsack",
+    "username": "Karianne",
+    "email": "Julianne.OConner@kory.org",
+    "address": {
+      "street": "Hoeger Mall",
+      "suite": "Apt. 692",
+      "city": "South Elvis",
+      "zipcode": "53919-4257",
+      "geo": {
+        "lat": "29.4572",
+        "lng": "-164.2990"
+      }
+    },
+    "phone": "493-170-9623 x156",
+    "website": "kale.biz",
+    "company": {
+      "name": "Robel-Corkery",
+      "catchPhrase": "Multi-tiered zero tolerance productivity",
+      "bs": "transition cutting-edge web services"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Chelsey Dietrich",
+    "username": "Kamren",
+    "email": "Lucio_Hettinger@annie.ca",
+    "address": {
+      "street": "Skiles Walks",
+      "suite": "Suite 351",
+      "city": "Roscoeview",
+      "zipcode": "33263",
+      "geo": {
+        "lat": "-31.8129",
+        "lng": "62.5342"
+      }
+    },
+    "phone": "(254)954-1289",
+    "website": "demarco.info",
+    "company": {
+      "name": "Keebler LLC",
+      "catchPhrase": "User-centric fault-tolerant solution",
+      "bs": "revolutionize end-to-end systems"
+    }
+  },
+  {
+    "id": 6,
+    "name": "Mrs. Dennis Schulist",
+    "username": "Leopoldo_Corkery",
+    "email": "Karley_Dach@jasper.info",
+    "address": {
+      "street": "Norberto Crossing",
+      "suite": "Apt. 950",
+      "city": "South Christy",
+      "zipcode": "23505-1337",
+      "geo": {
+        "lat": "-71.4197",
+        "lng": "71.7478"
+      }
+    },
+    "phone": "1-477-935-8478 x6430",
+    "website": "ola.org",
+    "company": {
+      "name": "Considine-Lockman",
+      "catchPhrase": "Synchronised bottom-line interface",
+      "bs": "e-enable innovative applications"
+    }
+  },
+  {
+    "id": 7,
+    "name": "Kurtis Weissnat",
+    "username": "Elwyn.Skiles",
+    "email": "Telly.Hoeger@billy.biz",
+    "address": {
+      "street": "Rex Trail",
+      "suite": "Suite 280",
+      "city": "Howemouth",
+      "zipcode": "58804-1099",
+      "geo": {
+        "lat": "24.8918",
+        "lng": "21.8984"
+      }
+    },
+    "phone": "210.067.6132",
+    "website": "elvis.io",
+    "company": {
+      "name": "Johns Group",
+      "catchPhrase": "Configurable multimedia task-force",
+      "bs": "generate enterprise e-tailers"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Nicholas Runolfsdottir V",
+    "username": "Maxime_Nienow",
+    "email": "Sherwood@rosamond.me",
+    "address": {
+      "street": "Ellsworth Summit",
+      "suite": "Suite 729",
+      "city": "Aliyaview",
+      "zipcode": "45169",
+      "geo": {
+        "lat": "-14.3990",
+        "lng": "-120.7677"
+      }
+    },
+    "phone": "586.493.6943 x140",
+    "website": "jacynthe.com",
+    "company": {
+      "name": "Abernathy Group",
+      "catchPhrase": "Implemented secondary concept",
+      "bs": "e-enable extensible e-tailers"
+    }
+  },
+  {
+    "id": 9,
+    "name": "Glenna Reichert",
+    "username": "Delphine",
+    "email": "Chaim_McDermott@dana.io",
+    "address": {
+      "street": "Dayna Park",
+      "suite": "Suite 449",
+      "city": "Bartholomebury",
+      "zipcode": "76495-3109",
+      "geo": {
+        "lat": "24.6463",
+        "lng": "-168.8889"
+      }
+    },
+    "phone": "(775)976-6794 x41206",
+    "website": "conrad.com",
+    "company": {
+      "name": "Yost and Sons",
+      "catchPhrase": "Switchable contextually-based project",
+      "bs": "aggregate real-time technologies"
+    }
+  },
+  {
+    "id": 10,
+    "name": "Clementina DuBuque",
+    "username": "Moriah.Stanton",
+    "email": "Rey.Padberg@karina.biz",
+    "address": {
+      "street": "Kattie Turnpike",
+      "suite": "Suite 198",
+      "city": "Lebsackbury",
+      "zipcode": "31428-2261",
+      "geo": {
+        "lat": "-38.2386",
+        "lng": "57.2232"
+      }
+    },
+    "phone": "024-648-3804",
+    "website": "ambrose.net",
+    "company": {
+      "name": "Hoeger LLC",
+      "catchPhrase": "Centralized empowering task-force",
+      "bs": "target end-to-end models"
+    }
+  }
+]</msg>
+<status status="PASS" starttime="20220508 19:29:31.626" endtime="20220508 19:29:31.628"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${RESPOSTA}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20220508 19:29:31.629" level="INFO">${RESPOSTA} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220508 19:29:31.628" endtime="20220508 19:29:31.629"/>
+</kw>
+<status status="PASS" starttime="20220508 19:29:31.424" endtime="20220508 19:29:31.629"/>
+</kw>
+<kw name="Conferir o status code" library="ResourceAPI">
+<arg>200</arg>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${RESPOSTA.status_code}</arg>
+<arg>${STATUSCODE_DESEJADO}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<msg timestamp="20220508 19:29:31.635" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<status status="PASS" starttime="20220508 19:29:31.632" endtime="20220508 19:29:31.635"/>
+</kw>
+<status status="PASS" starttime="20220508 19:29:31.631" endtime="20220508 19:29:31.636"/>
+</kw>
+<kw name="Conferir o reason" library="ResourceAPI">
+<arg>OK</arg>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${RESPOSTA.reason}</arg>
+<arg>${REASON_DESEJADO}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20220508 19:29:31.639" endtime="20220508 19:29:31.644"/>
+</kw>
+<status status="PASS" starttime="20220508 19:29:31.637" endtime="20220508 19:29:31.644"/>
+</kw>
+<status status="PASS" starttime="20220508 19:29:31.422" endtime="20220508 19:29:31.645"/>
+</test>
+<test id="s1-t2" name="Buscar um users específico (GET em um users específico)" line="12">
+<kw name="Requisitar o users &quot;5&quot;" library="ResourceAPI" sourcename="Requisitar o users &quot;${ID_USERS}&quot;">
+<kw name="Get Request" library="RequestsLibrary">
+<var>${RESPOSTA}</var>
+<arg>UsersAPI</arg>
+<arg>users/${ID_USERS}</arg>
+<doc>Send a GET request on the session object found using the
+given `alias`</doc>
+<msg timestamp="20220508 19:29:31.723" level="INFO">GET Request : url=http://jsonplaceholder.typicode.com/users/5 
+ path_url=/users/5 
+ headers={'User-Agent': 'python-requests/2.27.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20220508 19:29:31.724" level="INFO">GET Response : url=http://jsonplaceholder.typicode.com/users/5 
+ status=200, reason=OK 
+ body={
+  "id": 5,
+  "name": "Chelsey Dietrich",
+  "username": "Kamren",
+  "email": "Lucio_Hettinger@annie.ca",
+  "address": {
+    "street": "Skiles Walks",
+    "suite": "Suite 351",
+    "city": "Roscoeview",
+    "zipcode": "33263",
+    "geo": {
+      "lat": "-31.8129",
+      "lng": "62.5342"
+    }
+  },
+  "phone": "(254)954-1289",
+  "website": "demarco.info",
+  "company": {
+    "name": "Keebler LLC",
+    "catchPhrase": "User-centric fault-tolerant solution",
+    "bs": "revolutionize end-to-end systems"
+  }
+} 
+ </msg>
+<msg timestamp="20220508 19:29:31.724" level="INFO">${RESPOSTA} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220508 19:29:31.653" endtime="20220508 19:29:31.725"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${RESPOSTA.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220508 19:29:31.727" level="INFO">{
+  "id": 5,
+  "name": "Chelsey Dietrich",
+  "username": "Kamren",
+  "email": "Lucio_Hettinger@annie.ca",
+  "address": {
+    "street": "Skiles Walks",
+    "suite": "Suite 351",
+    "city": "Roscoeview",
+    "zipcode": "33263",
+    "geo": {
+      "lat": "-31.8129",
+      "lng": "62.5342"
+    }
+  },
+  "phone": "(254)954-1289",
+  "website": "demarco.info",
+  "company": {
+    "name": "Keebler LLC",
+    "catchPhrase": "User-centric fault-tolerant solution",
+    "bs": "revolutionize end-to-end systems"
+  }
+}</msg>
+<status status="PASS" starttime="20220508 19:29:31.725" endtime="20220508 19:29:31.727"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${RESPOSTA}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20220508 19:29:31.728" level="INFO">${RESPOSTA} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220508 19:29:31.727" endtime="20220508 19:29:31.728"/>
+</kw>
+<status status="PASS" starttime="20220508 19:29:31.652" endtime="20220508 19:29:31.729"/>
+</kw>
+<kw name="Conferir o status code" library="ResourceAPI">
+<arg>200</arg>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${RESPOSTA.status_code}</arg>
+<arg>${STATUSCODE_DESEJADO}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<msg timestamp="20220508 19:29:31.734" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<status status="PASS" starttime="20220508 19:29:31.731" endtime="20220508 19:29:31.735"/>
+</kw>
+<status status="PASS" starttime="20220508 19:29:31.730" endtime="20220508 19:29:31.735"/>
+</kw>
+<kw name="Conferir o reason" library="ResourceAPI">
+<arg>OK</arg>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${RESPOSTA.reason}</arg>
+<arg>${REASON_DESEJADO}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20220508 19:29:31.738" endtime="20220508 19:29:31.743"/>
+</kw>
+<status status="PASS" starttime="20220508 19:29:31.736" endtime="20220508 19:29:31.743"/>
+</kw>
+<kw name="Conferir se retorna os dados id, nome e email corretos do users 5" library="ResourceAPI">
+<kw name="Dictionary Should Contain Item" library="Collections">
+<arg>${RESPOSTA.json()}</arg>
+<arg>id</arg>
+<arg>${USERS_15.id}</arg>
+<doc>An item of ``key`` / ``value`` must be found in a ``dictionary``.</doc>
+<status status="PASS" starttime="20220508 19:29:31.745" endtime="20220508 19:29:31.749"/>
+</kw>
+<kw name="Dictionary Should Contain Item" library="Collections">
+<arg>${RESPOSTA.json()}</arg>
+<arg>name</arg>
+<arg>${USERS_15.name}</arg>
+<doc>An item of ``key`` / ``value`` must be found in a ``dictionary``.</doc>
+<status status="PASS" starttime="20220508 19:29:31.750" endtime="20220508 19:29:31.756"/>
+</kw>
+<kw name="Dictionary Should Contain Item" library="Collections">
+<arg>${RESPOSTA.json()}</arg>
+<arg>email</arg>
+<arg>${USERS_15.email}</arg>
+<doc>An item of ``key`` / ``value`` must be found in a ``dictionary``.</doc>
+<status status="PASS" starttime="20220508 19:29:31.757" endtime="20220508 19:29:31.761"/>
+</kw>
+<status status="PASS" starttime="20220508 19:29:31.744" endtime="20220508 19:29:31.762"/>
+</kw>
+<status status="PASS" starttime="20220508 19:29:31.649" endtime="20220508 19:29:31.763"/>
+</test>
+<test id="s1-t3" name="Cadastrar um novo users (POST)" line="18">
+<kw name="Cadastrar um nomo users" library="ResourceAPI">
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${HEADERS}</var>
+<arg>content-type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20220508 19:29:31.775" level="INFO">${HEADERS} = {'content-type': 'application/json'}</msg>
+<status status="PASS" starttime="20220508 19:29:31.773" endtime="20220508 19:29:31.776"/>
+</kw>
+<kw name="Post Request" library="RequestsLibrary">
+<var>${RESPOSTA}</var>
+<arg>UsersAPI</arg>
+<arg>users</arg>
+<arg>data={ "0": { "id": 11, "name": "Isabella Vieira", "username": "Isa", "email": "isabella@gmail.com", "address": { "street": "Kulas Ligh", "suite": "Apt. 55", "city": "Serra", "zipcode": "92998-3875", "geo": { "lat": "-37.3158", "lng": "81.1497" } }, "phone": "1-770-736-8039 x56442", "website": "github.com", "company": { "name": "Romaguera", "catchPhrase": "Multi-layered client-server", "bs": "harness real-time" } }, "id": 11 }</arg>
+<arg>headers=${HEADERS}</arg>
+<doc>Send a POST request on the session object found using the
+given `alias`</doc>
+<msg timestamp="20220508 19:29:32.188" level="INFO">POST Request : url=http://jsonplaceholder.typicode.com/users 
+ path_url=/users 
+ headers={'User-Agent': 'python-requests/2.27.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'content-type': 'application/json', 'Content-Length': '425'} 
+ body=b'{ "0": { "id": 11, "name": "Isabella Vieira", "username": "Isa", "email": "isabella@gmail.com", "address": { "street": "Kulas Ligh", "suite": "Apt. 55", "city": "Serra", "zipcode": "92998-3875", "geo": { "lat": "-37.3158", "lng": "81.1497" } }, "phone": "1-770-736-8039 x56442", "website": "github.com", "company": { "name": "Romaguera", "catchPhrase": "Multi-layered client-server", "bs": "harness real-time" } }, "id": 11 }' 
+ </msg>
+<msg timestamp="20220508 19:29:32.188" level="INFO">POST Response : url=http://jsonplaceholder.typicode.com/users 
+ status=201, reason=Created 
+ body={
+  "0": {
+    "id": 11,
+    "name": "Isabella Vieira",
+    "username": "Isa",
+    "email": "isabella@gmail.com",
+    "address": {
+      "street": "Kulas Ligh",
+      "suite": "Apt. 55",
+      "city": "Serra",
+      "zipcode": "92998-3875",
+      "geo": {
+        "lat": "-37.3158",
+        "lng": "81.1497"
+      }
+    },
+    "phone": "1-770-736-8039 x56442",
+    "website": "github.com",
+    "company": {
+      "name": "Romaguera",
+      "catchPhrase": "Multi-layered client-server",
+      "bs": "harness real-time"
+    }
+  },
+  "id": 11
+} 
+ </msg>
+<msg timestamp="20220508 19:29:32.188" level="INFO">${RESPOSTA} = &lt;Response [201]&gt;</msg>
+<status status="PASS" starttime="20220508 19:29:31.776" endtime="20220508 19:29:32.188"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${RESPOSTA.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220508 19:29:32.190" level="INFO">{
+  "0": {
+    "id": 11,
+    "name": "Isabella Vieira",
+    "username": "Isa",
+    "email": "isabella@gmail.com",
+    "address": {
+      "street": "Kulas Ligh",
+      "suite": "Apt. 55",
+      "city": "Serra",
+      "zipcode": "92998-3875",
+      "geo": {
+        "lat": "-37.3158",
+        "lng": "81.1497"
+      }
+    },
+    "phone": "1-770-736-8039 x56442",
+    "website": "github.com",
+    "company": {
+      "name": "Romaguera",
+      "catchPhrase": "Multi-layered client-server",
+      "bs": "harness real-time"
+    }
+  },
+  "id": 11
+}</msg>
+<status status="PASS" starttime="20220508 19:29:32.189" endtime="20220508 19:29:32.191"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${RESPOSTA}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20220508 19:29:32.192" level="INFO">${RESPOSTA} = &lt;Response [201]&gt;</msg>
+<status status="PASS" starttime="20220508 19:29:32.191" endtime="20220508 19:29:32.192"/>
+</kw>
+<status status="PASS" starttime="20220508 19:29:31.771" endtime="20220508 19:29:32.193"/>
+</kw>
+<kw name="Conferir o status code Post" library="ResourceAPI">
+<arg>201</arg>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${RESPOSTA.status_code}</arg>
+<arg>${STATUSCODEPOST_DESEJADO}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<msg timestamp="20220508 19:29:32.197" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<status status="PASS" starttime="20220508 19:29:32.195" endtime="20220508 19:29:32.198"/>
+</kw>
+<status status="PASS" starttime="20220508 19:29:32.193" endtime="20220508 19:29:32.198"/>
+</kw>
+<kw name="Conferir se retorna o id do novo users" library="ResourceAPI">
+<kw name="Dictionary Should Contain Item" library="Collections">
+<arg>${RESPOSTA.json()}</arg>
+<arg>id</arg>
+<arg>${NOVO_USER.id}</arg>
+<doc>An item of ``key`` / ``value`` must be found in a ``dictionary``.</doc>
+<status status="PASS" starttime="20220508 19:29:32.200" endtime="20220508 19:29:32.208"/>
+</kw>
+<status status="PASS" starttime="20220508 19:29:32.199" endtime="20220508 19:29:32.208"/>
+</kw>
+<status status="PASS" starttime="20220508 19:29:31.767" endtime="20220508 19:29:32.209"/>
+</test>
+<test id="s1-t4" name="Atualizar dados de um users (PUT)" line="23">
+<kw name="Atualizar dados &quot;1&quot;" library="ResourceAPI" sourcename="Atualizar dados &quot;${USERS_ID}&quot;">
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${HEADERS}</var>
+<arg>content-type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20220508 19:29:32.220" level="INFO">${HEADERS} = {'content-type': 'application/json'}</msg>
+<status status="PASS" starttime="20220508 19:29:32.219" endtime="20220508 19:29:32.220"/>
+</kw>
+<kw name="Put Request" library="RequestsLibrary">
+<var>${RESPOSTA}</var>
+<arg>UsersAPI</arg>
+<arg>users/${USERS_ID}</arg>
+<arg>data={ "0": { "id": 1, "name": "Isabella Vieira", "username": "Isa", "email": "isabella@gmail.com", "address": { "street": "Kulas Ligh", "suite": "Apt. 55", "city": "Serra", "zipcode": "92998-3875", "geo": { "lat": "-37.3158", "lng": "81.1497" } }, "phone": "1-770-736-8039 x56442", "website": "github.com", "company": { "name": "Romaguera", "catchPhrase": "Multi-layered client-server", "bs": "harness real-time" } }, "id": 11 }</arg>
+<arg>headers=${HEADERS}</arg>
+<doc>Send a PUT request on the session object found using the
+given `alias`</doc>
+<msg timestamp="20220508 19:29:32.505" level="INFO">PUT Request : url=http://jsonplaceholder.typicode.com/users/1 
+ path_url=/users/1 
+ headers={'User-Agent': 'python-requests/2.27.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'content-type': 'application/json', 'Content-Length': '424'} 
+ body=b'{ "0": { "id": 1, "name": "Isabella Vieira", "username": "Isa", "email": "isabella@gmail.com", "address": { "street": "Kulas Ligh", "suite": "Apt. 55", "city": "Serra", "zipcode": "92998-3875", "geo": { "lat": "-37.3158", "lng": "81.1497" } }, "phone": "1-770-736-8039 x56442", "website": "github.com", "company": { "name": "Romaguera", "catchPhrase": "Multi-layered client-server", "bs": "harness real-time" } }, "id": 11 }' 
+ </msg>
+<msg timestamp="20220508 19:29:32.505" level="INFO">PUT Response : url=http://jsonplaceholder.typicode.com/users/1 
+ status=200, reason=OK 
+ body={
+  "0": {
+    "id": 1,
+    "name": "Isabella Vieira",
+    "username": "Isa",
+    "email": "isabella@gmail.com",
+    "address": {
+      "street": "Kulas Ligh",
+      "suite": "Apt. 55",
+      "city": "Serra",
+      "zipcode": "92998-3875",
+      "geo": {
+        "lat": "-37.3158",
+        "lng": "81.1497"
+      }
+    },
+    "phone": "1-770-736-8039 x56442",
+    "website": "github.com",
+    "company": {
+      "name": "Romaguera",
+      "catchPhrase": "Multi-layered client-server",
+      "bs": "harness real-time"
+    }
+  },
+  "id": 1
+} 
+ </msg>
+<msg timestamp="20220508 19:29:32.505" level="INFO">${RESPOSTA} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220508 19:29:32.221" endtime="20220508 19:29:32.506"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${RESPOSTA.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220508 19:29:32.508" level="INFO">{
+  "0": {
+    "id": 1,
+    "name": "Isabella Vieira",
+    "username": "Isa",
+    "email": "isabella@gmail.com",
+    "address": {
+      "street": "Kulas Ligh",
+      "suite": "Apt. 55",
+      "city": "Serra",
+      "zipcode": "92998-3875",
+      "geo": {
+        "lat": "-37.3158",
+        "lng": "81.1497"
+      }
+    },
+    "phone": "1-770-736-8039 x56442",
+    "website": "github.com",
+    "company": {
+      "name": "Romaguera",
+      "catchPhrase": "Multi-layered client-server",
+      "bs": "harness real-time"
+    }
+  },
+  "id": 1
+}</msg>
+<status status="PASS" starttime="20220508 19:29:32.506" endtime="20220508 19:29:32.508"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${RESPOSTA}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20220508 19:29:32.510" level="INFO">${RESPOSTA} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220508 19:29:32.509" endtime="20220508 19:29:32.510"/>
+</kw>
+<status status="PASS" starttime="20220508 19:29:32.217" endtime="20220508 19:29:32.510"/>
+</kw>
+<kw name="Conferir o status code" library="ResourceAPI">
+<arg>200</arg>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${RESPOSTA.status_code}</arg>
+<arg>${STATUSCODE_DESEJADO}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<msg timestamp="20220508 19:29:32.516" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<status status="PASS" starttime="20220508 19:29:32.514" endtime="20220508 19:29:32.516"/>
+</kw>
+<status status="PASS" starttime="20220508 19:29:32.512" endtime="20220508 19:29:32.517"/>
+</kw>
+<kw name="Conferir o reason" library="ResourceAPI">
+<arg>OK</arg>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${RESPOSTA.reason}</arg>
+<arg>${REASON_DESEJADO}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20220508 19:29:32.520" endtime="20220508 19:29:32.525"/>
+</kw>
+<status status="PASS" starttime="20220508 19:29:32.518" endtime="20220508 19:29:32.526"/>
+</kw>
+<status status="PASS" starttime="20220508 19:29:32.214" endtime="20220508 19:29:32.527"/>
+</test>
+<test id="s1-t5" name="Deletar um users (DELETE)" line="28">
+<kw name="Deletar o users &quot;2&quot;" library="ResourceAPI" sourcename="Deletar o users &quot;${DELETEUSERS_ID}&quot;">
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${HEADERS}</var>
+<arg>content-type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20220508 19:29:32.537" level="INFO">${HEADERS} = {'content-type': 'application/json'}</msg>
+<status status="PASS" starttime="20220508 19:29:32.535" endtime="20220508 19:29:32.538"/>
+</kw>
+<kw name="Delete Request" library="RequestsLibrary">
+<var>${RESPOSTA}</var>
+<arg>UsersAPI</arg>
+<arg>users/${DELETEUSERS_ID}</arg>
+<arg>data={ "id": 2, "name": "Ervin Howell", "username": "Antonette", "email": "Shanna@melissa.tv", "address": { "street": "Victor Plains", "suite": "Suite 879", "city": "Wisokyburgh", "zipcode": "90566-7771", "geo": { "lat": "-43.9509", "lng": "-34.4618" } }, "phone": "010-692-6593 x09125", "website": "anastasia.net", "company": { "name": "Deckow-Crist", "catchPhrase": "Proactive didactic contingency", "bs": "synergize scalable supply-chains" } }</arg>
+<arg>headers=${HEADERS}</arg>
+<doc>Send a DELETE request on the session object found using the
+given `alias`</doc>
+<msg timestamp="20220508 19:29:32.841" level="INFO">DELETE Request : url=http://jsonplaceholder.typicode.com/users/2 
+ path_url=/users/2 
+ headers={'User-Agent': 'python-requests/2.27.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'content-type': 'application/json', 'Content-Length': '441'} 
+ body=b'{ "id": 2, "name": "Ervin Howell", "username": "Antonette", "email": "Shanna@melissa.tv", "address": { "street": "Victor Plains", "suite": "Suite 879", "city": "Wisokyburgh", "zipcode": "90566-7771", "geo": { "lat": "-43.9509", "lng": "-34.4618" } }, "phone": "010-692-6593 x09125", "website": "anastasia.net", "company": { "name": "Deckow-Crist", "catchPhrase": "Proactive didactic contingency", "bs": "synergize scalable supply-chains" } }' 
+ </msg>
+<msg timestamp="20220508 19:29:32.841" level="INFO">DELETE Response : url=http://jsonplaceholder.typicode.com/users/2 
+ status=200, reason=OK 
+ body={} 
+ </msg>
+<msg timestamp="20220508 19:29:32.841" level="INFO">${RESPOSTA} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220508 19:29:32.538" endtime="20220508 19:29:32.841"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${RESPOSTA.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220508 19:29:32.844" level="INFO">{}</msg>
+<status status="PASS" starttime="20220508 19:29:32.842" endtime="20220508 19:29:32.844"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${RESPOSTA}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20220508 19:29:32.845" level="INFO">${RESPOSTA} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220508 19:29:32.844" endtime="20220508 19:29:32.845"/>
+</kw>
+<status status="PASS" starttime="20220508 19:29:32.533" endtime="20220508 19:29:32.845"/>
+</kw>
+<kw name="Conferir o status code" library="ResourceAPI">
+<arg>200</arg>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${RESPOSTA.status_code}</arg>
+<arg>${STATUSCODE_DESEJADO}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<msg timestamp="20220508 19:29:32.851" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<status status="PASS" starttime="20220508 19:29:32.848" endtime="20220508 19:29:32.851"/>
+</kw>
+<status status="PASS" starttime="20220508 19:29:32.847" endtime="20220508 19:29:32.852"/>
+</kw>
+<kw name="Conferir o reason" library="ResourceAPI">
+<arg>OK</arg>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${RESPOSTA.reason}</arg>
+<arg>${REASON_DESEJADO}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20220508 19:29:32.854" endtime="20220508 19:29:32.859"/>
+</kw>
+<status status="PASS" starttime="20220508 19:29:32.853" endtime="20220508 19:29:32.860"/>
+</kw>
+<status status="PASS" starttime="20220508 19:29:32.530" endtime="20220508 19:29:32.861"/>
+</test>
+<doc>Documentação da API: http://jsonplaceholder.typicode.com/users</doc>
+<status status="PASS" starttime="20220508 19:29:30.932" endtime="20220508 19:29:32.866"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="5" fail="0" skip="0" id="s1" name="TestCasesAPIUsers">TestCasesAPIUsers</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
