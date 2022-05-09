@@ -8,3 +8,5 @@ Para o os dois desafios propostos dividir em 3 pastas de arquivos sendo: _Desafi
 * Robot Framework > SeleniumLibrary > Library Requests 0.7.2
 * Visual Studio Code >  Robot Framework Language Server da Robocorp
 * Web Driver > geckdriver-v0.31.0
+
+## Instalação das Ferramentas:
