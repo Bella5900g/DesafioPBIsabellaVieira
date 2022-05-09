@@ -33,5 +33,13 @@ _OBS: Não instale mais nenhum outro plugin para Robot._
 
 * Web Driver <br> Os teste foram executados e testados no Browser Firefox(Mozilla) para isso acesse o link e baixe o ```geckdriver-v0.31.0``` de acordo com o seu sistema operacional, nesse cenário foi utilizado o Windows x64 <br> _Link_ <https://github.com/mozilla/geckodriver/releases>
 
+## Execução:
+
+* Para executar os testes abra o terminal de comando dentro no visual studio code na pasta dos projetos e insira o comando:
+```robot -d .\resultados\ .\desafioDom_gherkin_bdd.robot``` > Para o Desafio 2.1 WebTesting <br>
+```robot -d .\resultados\ .\TestCasesAPIUsers.robot``` > Para o Desafio 2.2 APITesting <br>
+_Os Logs dos resultados ficaram nas devidas pastas de cada desafio._
+
+
 
 
