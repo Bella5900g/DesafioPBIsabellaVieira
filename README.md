@@ -27,7 +27,7 @@ _Insira no Prompt de Comando_ <br>
 ```pip install -U robotframework-requests==0.7.2```<br>
 _Foi utilizado a versão 0.7.2 da Library Requests_
 
-* Visual Studio Code <br> _Vá na opção "Extensões" e procure pela extensão chamada:_ <br> 
+* Visual Studio Code <br> <https://code.visualstudio.com/download> <br> _Vá na opção "Extensões" e procure pela extensão chamada:_ <br> 
 ```Robot Framework Language Server da Robocorp```<br>
 _OBS: Não instale mais nenhum outro plugin para Robot._
 
@@ -35,7 +35,7 @@ _OBS: Não instale mais nenhum outro plugin para Robot._
 
 ## Execução:
 
-* Para executar os testes abra o terminal de comando dentro no visual studio code na pasta dos projetos e insira o comando: <br>
+* Para executar os testes abra o terminal de comando dentro do visual studio code na pasta dos projetos e insira o comando: <br>
 ```robot -d .\resultados\ .\desafioDom_gherkin_bdd.robot``` > Para o Desafio 2.1 WebTesting <br>
 ```robot -d .\resultados\ .\TestCasesAPIUsers.robot``` > Para o Desafio 2.2 APITesting <br>
 _Os Logs dos resultados ficaram nas devidas pastas de cada desafio._
