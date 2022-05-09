@@ -31,5 +31,7 @@ _Foi utilizado a versão 0.7.2 da Library Requests_
 ```Robot Framework Language Server da Robocorp```<br>
 _OBS: Não instale mais nenhum outro plugin para Robot._
 
+* Web Driver <br> Os teste foram executados e testados no Browser Firefox(Mozilla) para isso acesse o link e baixe o ```geckdriver-v0.31.0``` de acordo com o seu sistema operacional, nesse cenário foi utilizado o Windows x64 <br> _Link_ <https://github.com/mozilla/geckodriver/releases>
+
 
 
