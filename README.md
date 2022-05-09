@@ -13,7 +13,7 @@ Para o os dois desafios propostos dividir em 3 pastas de arquivos sendo: _Desafi
 * Python 3 <https://www.python.org/>
 (Na Instalação deve ativar o CheckBox "Add Python 3.10.4 PATH")
 
-* Robot Framework /n <b> Depois de ter instalado o Python 3 <b>
-_Insira no Prompt de Comando_ <b>
+* Robot Framework <br> Depois de ter instalado o Python 3 <br>
+_Insira no Prompt de Comando_ <br>
 ( pip install robotframework ) Para está instalando o Robot Framework
 
