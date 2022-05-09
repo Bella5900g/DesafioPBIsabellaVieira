@@ -15,5 +15,5 @@ Para o os dois desafios propostos dividir em 3 pastas de arquivos sendo: _Desafi
 
 * Robot Framework <br> Depois de ter instalado o Python 3 <br>
 _Insira no Prompt de Comando:_ <br>
- ```pip install robotframework```  <br>  > Para está instalando o Robot Framework
+ ```pip install robotframework```  <br>  Para está instalando o Robot Framework
 
