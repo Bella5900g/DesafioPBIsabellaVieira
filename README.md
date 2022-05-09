@@ -10,10 +10,10 @@ Para o os dois desafios propostos dividir em 3 pastas de arquivos sendo: _Desafi
 * Web Driver > geckdriver-v0.31.0
 
 ## Instalação das Ferramentas:
-* Python 3 <https://www.python.org/>
+* Python 3 <https://www.python.org/> <br>
 (Na Instalação deve ativar o CheckBox "Add Python 3.10.4 PATH")
 
 * Robot Framework <br> Depois de ter instalado o Python 3 <br>
 _Insira no Prompt de Comando_ <br>
-( pip install robotframework ) Para está instalando o Robot Framework
+( ```pip install robotframework``` )  > Para está instalando o Robot Framework
 
