@@ -16,4 +16,10 @@ Para o os dois desafios propostos dividir em 3 pastas de arquivos sendo: _Desafi
 * Robot Framework <br> Depois de ter instalado o Python 3 <br>
 _Insira no Prompt de Comando:_ <br>
  ```pip install robotframework```  <br>  Para está instalando o Robot Framework
+ 
+ * Library <br> Depois de ter instalado o Robot framework pelo Prompt de Comando agora iremos instalar as Library que foram utilizados nos testes. <br> 
+ #### SeleniumLibrary
+ _Insira no Prompt de Comando_ <br>
+```pip install --upgrade robotframework-seleniumlibrary```
+
 
